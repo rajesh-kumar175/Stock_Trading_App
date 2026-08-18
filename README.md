@@ -32,7 +32,7 @@ python app.py
 - GitHub: rajesh-kumar175
 - Kaggle: rjhydvh
 - LinkedIn: [Your LinkedIn]
-- **Live Demo:** Add your Render link after deploy
+- **Live Demo:** Live Demo: https://stock-trading-app-b4uk.onrender.com
 
 ### 📈 This is Level 5 - Complete Software!
 Not a basic script - this is production-ready app with auth, DB, and deployment.
