@@ -1,6 +1,6 @@
 # 🚀 Stock Trading App - Real-Time Portfolio Manager
 
-### 🔗 LIVE PROJECT LINK: https://stock-trading-app-xyz.onrender.com 
+https://stock-trading-app-b4uk.onrender.com
 **👆 Click to see live app - Python Developer Level Project**
 
 ## Built by Rajesh Kumar Yadav | Python Developer | Gurugram, India
