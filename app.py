@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
-import yfinance as yf
-import pandas as pd
+import yfinance as import pandas as pd
 from models import db, User, Portfolio, Watchlist
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
