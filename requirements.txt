@@ -1,6 +1,7 @@
-Flask==2.3.3
-Flask-SQLAlchemy==3.1.1
-pandas==2.1.0
-yfinance==0.2.28
-python-dotenv==1.0.0
-gunicorn==21.2.0
+Flask
+Flask-SQLAlchemy
+yfinance==0.2.31
+pandas==2.0.3
+numpy==1.26.4
+python-dotenv
+gunicorn
