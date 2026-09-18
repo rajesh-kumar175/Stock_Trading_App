@@ -1,38 +1,119 @@
-# 🚀 Stock Trading App - Real-Time Portfolio Manager
+# 🚀 Stock Trading App — Run Locally (Updated)
+
+Repository: https://github.com/rajesh-kumar175/Stock_Trading_App
+
+## Important: current code status
+
+Before running, note that the current `app.py` has issues that must be fixed:
+
+1. The yfinance/pandas import line is invalid. It should be:
+
+```python
+import yfinance as yf
+import pandas as pd
+```
+
+2. `Flask-Login` is imported by `app.py`, but it is not currently listed in `requirements.txt`. Install it manually or add it to `requirements.txt`:
+
+```bash
+pip install Flask-Login
+```
+
+3. `app.py` refers to `dashboard.html`, `login.html`, and `register.html`, but the repository currently contains `templates/index.html`. The home route must render an existing template, or the missing templates must be added.
+
+## Windows setup
+
+Open **Command Prompt** or **PowerShell**, then run:
+
+```bash
+git clone https://github.com/rajesh-kumar175/Stock_Trading_App.git
+cd Stock_Trading_App
+python -m venv venv
+venv\Scripts\activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+pip install Flask-Login
+```
+
+Open `app.py` and fix the imports as shown above. Also make sure the route renders an existing template, for example:
+
+```python
+@app.route('/')
+def index():
+    return render_template('index.html')
+```
+
+Then start the server:
+
+```bash
+python app.py
+```
+
+Open this URL in your browser:
+
+```text
+http://127.0.0.1:5000
+```
+
+## macOS/Linux setup
+
+```bash
+git clone https://github.com/rajesh-kumar175/Stock_Trading_App.git
+cd Stock_Trading_App
+python3 -m venv venv
+source venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+pip install Flask-Login
+```
+
+Fix the imports and template route as described above, then run:
+
+```bash
+python3 app.py
+```
+
+Open:
+
+```text
+http://127.0.0.1:5000
+```
+
+## Stop the server
+
+Press:
+
+```text
+Ctrl + C
+```
+
+## Common errors
+
+### `SyntaxError` on the yfinance import
+Replace the invalid import with:
+
+```python
+import yfinance as yf
+import pandas as pd
+```
+
+### `ModuleNotFoundError: No module named 'flask_login'`
+
+```bash
+pip install Flask-Login
+```
+
+### `TemplateNotFound: dashboard.html`
+
+The current repository has `templates/index.html`, not `dashboard.html`. Change the `/` route to render `index.html`, or create the required dashboard template.
+
+### `ModuleNotFoundError: No module named 'models'`
+
+Run `python app.py` from the project root—the folder containing both `app.py` and `models.py`.
+
+### Stock data does not load
+The application uses Yahoo Finance through `yfinance`, so an internet connection is required. Use valid symbols such as `AAPL` or `RELIANCE.NS`.
+
+## Live application
 
 https://stock-trading-app-b4uk.onrender.com
-**👆 Click to see live app - Python Developer Level Project**
-
-## Built by Rajesh Kumar Yadav | Python Developer | Gurugram, India
-
-### 📊 What it does?
-Real-time stock analysis app with technical indicators, user authentication, and portfolio tracking. Transforms financial data into live web app.
-
-### 🛠️ Tech Stack (Python Developer Level)
-- **Backend:** Python, Flask, Pandas, yFinance API
-- **Database:** SQLAlchemy, Flask-Login (SQLite → PostgreSQL ready)
-- **Frontend:** Chart.js, HTML5, CSS3
-- **DevOps:** Docker, Gunicorn, Render Deployment
-- **Analysis:** MA20, MA50, RSI, Daily Returns calculation
-
-### ✨ Features
-- ✅ Real-time stock price fetch (NSE & NASDAQ)
-- ✅ Technical Analysis with Pandas
-- ✅ Interactive Charts
-- ✅ User Login/Register system
-- ✅ Watchlist & Portfolio management
-- ✅ Docker ready for production
-
-### 🚀 How to Run
-pip install -r requirements.txt
-python app.py
-# Open http://localhost:5000
-
-### 🔗 Links
-- GitHub: rajesh-kumar175
-- Kaggle: rjhydvh
-- LinkedIn: [Your LinkedIn]
-- **Live Demo:** https://stock-trading-app-b4uk.onrender.com
-
-### 📈 This is Level 5 - Complete Software!
-Not a basic script - this is production-ready app with auth, DB, and deployment.
