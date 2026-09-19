@@ -1,5 +1,6 @@
 Flask
 Flask-SQLAlchemy
+Flask-Login
 yfinance==0.2.31
 pandas==2.0.3
 numpy==1.26.4
