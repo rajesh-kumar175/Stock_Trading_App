@@ -1,4 +1,4 @@
-# 🚀 Stock Trading App — Run Locally (Updated)
+# 🚀 Stock Trading App - Local Setup Guide
 
 Repository: https://github.com/rajesh-kumar175/Stock_Trading_App
 
@@ -19,7 +19,7 @@ import pandas as pd
 pip install Flask-Login
 ```
 
-3. `app.py` refers to `dashboard.html`, `login.html`, and `register.html`, but the repository currently contains `templates/index.html`. The home route must render an existing template, or the missing templates must be added.
+3. `app.py` refers to `dashboard.html`, `login.html`, and `register.html`, but the repository currently contains `templates/index.html`. The home route must render an existing template, or the missing[...]
 
 ## Windows setup
 
