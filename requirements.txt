@@ -1,4 +1,8 @@
 Flask
+Flask-SQLAlchemy
 Flask-Login
-pandas
+yfinance==0.2.31
+pandas==2.0.3
+numpy==1.26.4
+python-dotenv
 gunicorn
